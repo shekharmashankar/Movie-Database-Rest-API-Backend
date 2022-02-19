@@ -52,7 +52,7 @@ app.use(
 // express session config
 app.use(
   expressSession({
-    secret: process.env.EXPRESS_SESSION_SECRET || config.expressSession.secret,
+    secret: process.env.EXPRESS_SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
   })
