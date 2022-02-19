@@ -8,7 +8,7 @@ const methodOverride = require("method-override");
 const flash = require("connect-flash");
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
-const expressSession = require("express-session");
+const expressSession = require("cookie-session");
 const path = require("path");
 
 // model import
@@ -23,7 +23,7 @@ const commentRouter = require(__dirname + "/routes/comment");
 const authRouter = require(__dirname + "/routes/auth");
 
 // connect to db
-mongoose.connect(process.env.DB_CONNECTION);
+mongoose.connect("mongodb+srv://diethrone:sagar2019@cluster0.ovsr3.mongodb.net/IMDBMoviesDatabase?retryWrites=true&w=majority");
 mongoose.connection.on("error", (err) => {
   console.log("err", err);
 });
