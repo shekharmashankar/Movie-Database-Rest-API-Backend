@@ -54,7 +54,7 @@ app.use(
 // express session config
 app.use(
   expressSession({
-    secret: process.env.EXPRESS_SESSION_SECRET,
+    secret: "bdscjbsdkjbvjkbsjkvb",
     resave: false,
     saveUninitialized: false,
   })
